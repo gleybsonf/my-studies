@@ -1,0 +1,24 @@
+.wrapper {
+    display: grid;
+    /*divide em quantidade de colunas*/
+    /* grid-template-columns: 200px 200px 200px; */
+    /* grid-template-columns: 2fr 1fr 1fr; */
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-columns: 20px repeat(6, 1fr) 20px; */
+    /* grid-template-columns: repeat(3, 1fr 2fr); */
+
+    /* Definindo as rows com grid-auto-rows */
+    grid-auto-rows: 200px;
+    border: 2px solid #f76707;
+    border-radius: 5px;
+    background-color: #fff4e6;
+}
+
+.wrapper > div {      
+    border: 2px solid #ffa94d;
+    border-radius: 5px;
+    background-color: #ffd8a8;
+    padding: 1em;
+    color: #d9480f; 
+    font-weight: bold;
+}
