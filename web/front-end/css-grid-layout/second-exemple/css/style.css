@@ -1,0 +1,32 @@
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+footer{
+    background-color:  #f5dcf3;
+}
+
+section{
+    background-color: #eaffbd;
+}
+
+nav{
+    background-color: #99d8ff;
+}
+
+header { 
+    background-color: #fbd4d4;
+}
+
+article{
+    background-color: aquamarine;
+}
+
+.grid-wrapper>*{
+    min-height: 100px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
