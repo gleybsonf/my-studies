@@ -23,3 +23,14 @@ const obj = {
   //imprimeTudo()
   //imprime("array1")
   imprimeComForeach()
+
+  interface Person {
+    [index: string]: string | number;
+    age: number;
+    name: string;
+  }
+  
+  // 👇️ const p1: Person
+  const p1: Person = { name: 'Bobby', bairro: 'Chile', age: 30 };
+  
+  console.log("p1", p1)
