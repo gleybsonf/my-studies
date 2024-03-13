@@ -1,0 +1,35 @@
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+.collapsible input[type="checkbox"]:checked ~ .content {
+  display: block;
+}
+
+.collapsible input[type="checkbox"]:checked + i {
+  transform: rotate(180deg);
+}
+
+input[type=checkbox]:before {
+  content: "";
+}
