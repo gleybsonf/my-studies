@@ -6,6 +6,7 @@ var dialogBody = document.querySelector('.dialogNewsletter-body');
 var dialogOverlay = document.querySelector('.dialogNewsletter-overlay');
 
 btnAbreDialog.style.display = 'block';
+var video =  document.querySelector('video') 
 
 
 
@@ -13,7 +14,8 @@ btnAbreDialog.style.display = 'block';
 btnAbreDialog.addEventListener('click', function() {
   dialog.classList.add('dialogNewsletter--aberto');
   document.querySelector('.emailNewsletter').focus();
-  conteudoForaDialog.inert = true
+  conteudoForaDialog.inert = true;
+  video.removeAttribute('controls')
 });
 
 function fechandoDialog() {
@@ -21,7 +23,15 @@ function fechandoDialog() {
   dialog.classList.remove('dialogNewsletter--aberto');  
   conteudoForaDialog.inert = false
   btnAbreDialog.focus();   
+  video.setAttribute('controls', true)
 }
 
 // Listeners
 document.querySelector('.dialogNewsletter-fechar').addEventListener('click', fechandoDialog);
+dialogOverlay.addEventListener('click', fechandoDialog())
+
+document.addEventListener('keyup', function(event){
+  if(event.keycode === 27){
+    fechandoDialog()
+  }  
+})
