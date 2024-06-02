@@ -5,6 +5,8 @@ var new2 = document.querySelector('#new2')
 
 new0.style.display = "block";
 
+var noticias = document.querySelectorAll('.listaDeArtigos-item')
+
 //criando indicadlor de slide atual
 
 var indicadorSlideAtual = document.createElement('span');
@@ -15,10 +17,14 @@ indicadorSlideAtual.textContent('(Slide Atual)')
 // Percorre todos os botoes controladores
 btns.forEach(function(btn) {
   btn.addEventListener('click', function() {
- 
-    if(this.getAtrribute('data-sliderItem') === '0'){
 
-    }       
+    //btn.href = 'javascript:void(0)' 
+    noticias.forEach( function(noticia){
+      noticia.style.display = 'none'
+      if(this.getAttribute('data-sliderItem') === noticia.getAttribute('data-noticia')){
+        noticia.style.display = 'block'
+      }   
+    }.bind(this))        
 
     document.querySelector('.listaDeArtigos-slider-item .escondeVisualmente').remove();
     this.append(indicadorSlideAtual)
