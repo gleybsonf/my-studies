@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fff;
+}
+
+
+/* Aplicando Media query global */
+
+h1{
+    font-size: 24px;
+}                           
+
+/*padrão tablet*/
+@media (min-width: 768px) {
+    h1{
+        font-size: 36px;
+    }
+}
+
+/*padrão mobile*/
+@media (min-width: 1024px) {
+    h1{
+        font-size: 42px;
+    }
+}
+
+/*Orientação horizontal*/
+@media(orientation: landscape){
+    h1{
+        font-size: 42px;
+    }
+}
